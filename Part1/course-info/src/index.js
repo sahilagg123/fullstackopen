@@ -30,19 +30,26 @@ const Header = (props) => {
 const Content = (props) => {
   return (
     <div>
-      <p>
+      <Part part={props.part1} excercise={props.exercises1}>
         {" "}
-        {props.part1} {props.exercises1}{" "}
-      </p>
-      <p>
+      </Part>
+      <Part part={props.part2} excercise={props.exercises2}>
         {" "}
-        {props.part2} {props.exercises2}{" "}
-      </p>
-      <p>
+      </Part>
+      <Part part={props.part3} excercise={props.exercises3}>
         {" "}
-        {props.part3} {props.exercises3}{" "}
-      </p>
+      </Part>
     </div>
+  );
+};
+const Part = (props) => {
+  return (
+    <p>
+      {" "}
+      {console.log(props.excercise)}
+      
+      {props.part} {props.excercise}{" "}
+    </p>
   );
 };
 const Total = (props) => {
